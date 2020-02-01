@@ -7,6 +7,7 @@ using SeleniumProjectNetCore.Pages;
 using SeleniumProjectNetCore.TestFaceClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace SeleniumProjectNetCore.Tests.Base
@@ -39,9 +40,11 @@ namespace SeleniumProjectNetCore.Tests.Base
             switch (browser)
             {
                 case "Firefox":
-                    return new FirefoxDriver();
+                    return new FirefoxDriver(Directory.GetCurrentDirectory());
                 case "Chrome":
-                    return new ChromeDriver();
+                    var chromeOptions = new ChromeOptions();
+                    chromeOptions.AddArguments("headless");
+                    return new ChromeDriver(Directory.GetCurrentDirectory(), chromeOptions);
                 default:
                     throw new Exception("Browser " + browser + " not found");
             }

@@ -9,8 +9,8 @@ namespace SeleniumProjectNetCore.TestFaceClient
 {
     public class TestFace
     {
-        private const string AUTENTICATION_API = "https://autenticationapidemo.azurewebsites.net/api/Auth/autenticate";
-        private const string TESTFACE_API = "https://atcsapidemo.azurewebsites.net/api";
+        private const string AUTENTICATION_API = "http://localhost:50501/api/Auth/autenticate";
+        private const string TESTFACE_API = "http://localhost:61313/api";
 
         private static string Login()
         {

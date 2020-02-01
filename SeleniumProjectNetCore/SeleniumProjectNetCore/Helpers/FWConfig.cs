@@ -20,7 +20,7 @@ namespace SeleniumProjectNetCore.Helpers
         }
         public string GetValue(string key)
         {
-            return Builder.Build().GetSection(key).Value.ToString();
+            return Builder.Build().GetSection(key).Value;
         }
     }
 }

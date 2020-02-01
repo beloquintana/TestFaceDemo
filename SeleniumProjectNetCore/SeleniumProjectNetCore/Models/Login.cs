@@ -8,5 +8,10 @@ namespace SeleniumProjectNetCore.Models
     {
         public string User { get; set; }
         public string Pass { get; set; }
+
+        public override string ToString() 
+        {
+            return User + "," + Pass;
+        }
     }
 }
