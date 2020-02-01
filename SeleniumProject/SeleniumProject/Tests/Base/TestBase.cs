@@ -6,10 +6,6 @@ using SeleniumProject.Models;
 using SeleniumProject.Pages;
 using SeleniumProject.TestFaceClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumProject.Tests.Base
 {
